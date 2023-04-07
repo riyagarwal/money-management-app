@@ -10,8 +10,8 @@ export const INITIAL_STORE = [
     status: "EXPENSE",
     amount: 200,
     month: 3,
-    date: 2023,
-    year: 15,
+    date: 20,
+    year: 2023,
   },
 
   {
@@ -21,8 +21,8 @@ export const INITIAL_STORE = [
     status: "EXPENSE",
     amount: 200,
     month: 1,
-    date: 2023,
-    year: 15,
+    date: 15,
+    year: 2023,
   },
 
   {
@@ -32,8 +32,8 @@ export const INITIAL_STORE = [
     status: "EXPENSE",
     amount: 200,
     month: 2,
-    date: 2023,
-    year: 15,
+    date: 10,
+    year: 2023,
   },
 
   {
@@ -43,7 +43,7 @@ export const INITIAL_STORE = [
     status: "INCOME",
     amount: 200000,
     month: 4,
-    date: 2023,
-    year: 15,
+    date: 9,
+    year: 2023,
   }
 ];
