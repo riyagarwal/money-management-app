@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import AddExpense from "./components/add-expense/AddExpense";
+import Login from "./components/login/Login";
+import ManageExpense from "./components/manage-expense/ManageExpense";
+import PrivateRoutes from "./routes/PrivateRoutes";
+import RestrictedRoutes from "./routes/RestrictedRoutes";
+import { PATHS } from "./paths";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<PrivateRoutes />}>
+        <Route path={PATHS.ADD_EXPENSE} element={<AddExpense />} />
+        <Route path={PATHS.MANAGE_EXPENSE} element={<ManageExpense />} />
+      </Route>
+
+      <Route path="/" element={<RestrictedRoutes />}>
+        <Route path={PATHS.LOGIN} element={<Login />} />
+      </Route>
+    </Routes>
   );
 }
 
